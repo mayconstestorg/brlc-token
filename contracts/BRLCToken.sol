@@ -38,6 +38,6 @@ contract BRLCToken is CWToken {
      * @notice Returns true if token is BRLCoin implementation
      */
     function isBRLCoin() external pure returns (bool) {
-        return true;
+        return false;
     }
 }
