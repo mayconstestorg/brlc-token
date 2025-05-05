@@ -72,7 +72,7 @@ abstract contract CWToken is
         balance.frozen = balanceOfFrozen(account);
 
         uint256 detained = balance.premint + balance.frozen + balance.restricted;
-        balance.free = balance.total > detained ? balance.total - detained : 0;
+        balance.free = balance.total <= detained ? 0 : balance.total - detained;
         return balance;
     }
 
